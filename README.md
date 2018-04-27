@@ -4,7 +4,9 @@ A starter theme for WordPress based off [Automattic's _s](https://underscores.me
 easy-to-setup WordPress theme to begin building off of. There are no npm packages or Gulp
 files so this theme is easy to use with tools like [CodeKit](https://codekitapp.com/) and [Prepros](https://prepros.io/).
 
-### Setting Up###
+![Screenshot](https://second-cup-of-coffee.com/wp-content/uploads/2018/04/Mustard-theme-screenshot.png)
+
+### Setting Up ###
 To begin, clone this repo into your WordPress install's _themes_ folder. This theme uses Sass files and they 
 have been compiled from the _scss_ folder into _css_. The main Sass file is `scss/theme.scss` and this 
 includes the other Sass files. So you will need to set `scss/theme.scss` into `css/theme.css`. There is also 
