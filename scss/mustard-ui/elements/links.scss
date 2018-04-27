@@ -1,0 +1,20 @@
+// LINKS
+// ==============================
+
+$link-color: $brand-color;
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    font-weight: 400;
+    transition: opacity .1s ease-out;
+
+    &:focus,
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,44 @@
+// PANELS
+// =============================
+
+$panel-shadow: true;
+$panel-bg-color: $color-white;
+$panel-head-color: $color-gray-50;
+$panel-footer-color: $color-gray-50;
+
+.panel {
+    background: $panel-bg-color;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 30px 0;
+
+    @if $panel-shadow {
+        box-shadow: 0 4px 12px rgba($color-gray-300, 0.5);
+    }
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background: $panel-head-color;
+
+    .panel-title {
+        font-size: 28px;
+    }
+}
+
+.panel-body {
+    padding: 30px 15px;
+}
+
+.panel-footer {
+    padding: 15px;
+    background: $panel-footer-color;
+
+    & > * {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,29 @@
+// BASE
+// ==============================
+
+$body-bg-color: $color-white;
+$brand-color: $color-green-500;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $body-bg-color;
+}
+
+main {
+    flex: 1;
+}

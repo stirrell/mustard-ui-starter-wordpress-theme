@@ -1,0 +1,142 @@
+// FORMS
+// ==============================
+
+$input-bg-color: $color-white;
+$input-active-color: $brand-color;
+$input-border-color: $color-gray-400;
+$input-invalid-color: $color-red-200;
+$input-error-text-color: $color-red-500;
+$input-placeholder-color: $color-gray-500;
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-control-group {
+    display: flex;
+    justify-content: flex-start;
+
+    .form-control {
+        flex: 1;
+        padding-right: 15px;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+
+        &.grow-1x {
+            flex-grow: 1;
+        }
+
+        &.grow-2x {
+            flex-grow: 2;
+        }
+
+        &.grow-3x {
+            flex-grow: 3;
+        }
+    }
+}
+
+.validation-error {
+    margin-top: 2px;
+    font-size: 12px;
+    color: $input-error-text-color;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: inherit;
+    background: $input-bg-color;
+    border-radius: 5px;
+    border: 1px solid $input-border-color;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $input-active-color;
+    }
+
+    &.invalid {
+        border-color: $input-error-text-color;
+    }
+
+}
+
+fieldset {
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+
+    legend {
+        padding: 0 5px;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+select {
+    background: $input-bg-color url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="' + $input-border-color + '" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+    padding-right: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        background: $input-bg-color url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="' + $input-active-color + '" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+    }
+}
+
+textarea {
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    min-height: 100px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: $color-black;
+    background-color: $input-bg-color;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:focus {
+        border-color: $input-active-color;
+        outline: none;
+    }
+
+    &.invalid {
+        border-color: $input-invalid-color;
+    }
+}

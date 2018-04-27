@@ -1,0 +1,54 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+code {
+	white-space: pre-wrap;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-header {
+	align-items: flex-start;
+	padding: 0;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-header {
+	align-items: flex-start;
+	padding: 0;
+}
+
+.entry-title {
+	word-break: break-word;
+}
+
+.entry-footer {
+	.cat-links {
+		display: block;
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.post-navigation {
+	.nav-next {
+		a {
+			display: block;
+		}
+	}
+}

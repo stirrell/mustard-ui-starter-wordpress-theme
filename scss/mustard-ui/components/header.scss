@@ -1,0 +1,104 @@
+// HEADER
+// ==============================
+
+$header-height: 100vh;
+$header-title-size: 50px;
+$header-subtitle-size: 18px;
+$header-disclaimer-size: 12px;
+$header-bg-color: $color-amber-500;
+$header-text-color: $color-gray-800;
+
+header,
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: $header-height;
+    background: $header-bg-color;
+
+    .title {
+        font-size: $header-title-size;
+        line-height: $header-title-size;
+        font-weight: 400;
+        color: $header-text-color;
+        text-align: center;
+
+        @include breakpoint-min($bp-medium) {
+            font-size: $header-title-size * 1.2;
+            line-height: $header-title-size * 1.2;
+        }
+    }
+
+    .subtitle {
+        font-size: $header-subtitle-size;
+        line-height: 26px;
+        font-weight: 300;
+        color: $header-text-color;
+        text-align: center;
+
+        @include breakpoint-min($bp-medium) {
+            font-size: $header-subtitle-size * 1.4;
+            line-height: $header-subtitle-size * 1.4;
+        }
+    }
+
+    .disclaimer {
+        font-size: 12px;
+        color: $header-text-color;
+        text-align: center;
+    }
+
+    .scroll-down {
+        opacity: 1;
+        -webkit-transition: all .5s ease-in 3s;
+        transition: all .5s ease-in 3s;
+    }
+
+    .scroll-down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        margin-left: -16px;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $header-text-color;
+        border-radius: 50%;
+        animation: bounce 2s infinite 2s;
+        transition: all .2s ease-in;
+
+        &::before {
+            display: block;
+            position: relative;
+            bottom: 2px;
+            content: '';
+            transform: rotate(-45deg);
+            width: 12px;
+            height: 12px;
+            border: 2px solid $header-text-color;
+            border-width: 0px 0 2px 2px;
+        }
+    }
+
+    @keyframes bounce {
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+}

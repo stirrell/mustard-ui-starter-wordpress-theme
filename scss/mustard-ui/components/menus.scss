@@ -1,0 +1,30 @@
+// MENUS
+// ==============================
+
+$menu-shadow: true;
+$menu-bg-color: $color-white;
+$menu-hover-color: $color-gray-50;
+
+.menu {
+    display: inline-block;
+    list-style: none;
+    background: $menu-bg-color;
+    border-radius: 5px;
+
+    @if $menu-shadow {
+        box-shadow: 0 4px 12px rgba($color-gray-500, 0.5);
+    }
+
+    li {
+        a {
+            display: block;
+            padding: 10px 30px;
+            border-bottom: 1px solid $color-gray-200;
+
+            &:focus,
+            &:hover {
+                background: $menu-hover-color;
+            }
+        }
+    }
+}

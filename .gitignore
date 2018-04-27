@@ -1,4 +1,5 @@
 *.log
+*.codekit3
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/

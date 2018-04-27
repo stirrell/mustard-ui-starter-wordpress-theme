@@ -1,0 +1,21 @@
+// ALERTS
+// ==============================
+
+$alert-colors: (
+    'danger'   : $color-red-50,
+    'info'     : $color-blue-50,
+    'warning'  : $color-amber-50,
+    'success'  : $color-green-50,
+);
+
+.alert {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+@each $name, $color in $alert-colors {
+    .alert-#{$name} {
+        background: $color;
+    }
+}

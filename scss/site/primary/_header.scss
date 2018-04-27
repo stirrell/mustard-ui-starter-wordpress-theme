@@ -1,0 +1,13 @@
+header {
+    height: auto;
+    background-color: transparent;
+}
+.site-header {
+    background-color: $color__background-main-header;
+    .row {
+        margin: 0;
+    }
+    .container {
+        padding: 0;
+    }
+}

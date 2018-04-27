@@ -1,0 +1,12 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	.widget-title {
+		font-size: $font-size-base * 1.5;
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,59 @@
+// PROGRESS BARS
+// ==============================
+
+$progress-bar-height: 20px;
+$progress-bar-bg-color: $color-gray-200;
+$progress-bar-colors: (
+    'green'  : $color-green-400,
+    'blue'   : $color-blue-400,
+    'red'    : $color-red-400,
+);
+
+.progress-bar {
+    position: relative;
+    margin: 15px 0;
+    height: $progress-bar-height;
+    background: $progress-bar-bg-color;
+    border-radius: 5px;
+    overflow: hidden;
+
+    & > span {
+        display: block;
+        position: absolute;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+
+        @each $name, $color in $progress-bar-colors {
+            &.progress-bar-#{$name} {
+                background: $color;
+            }
+        }
+    }
+
+    &.striped {
+        & > span:after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+            background-size: 50px 50px;
+            overflow: hidden;
+        }
+    }
+
+    &.animated {
+        & > span:after {
+            animation: move 2s linear infinite;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 50px 50px;
+        }
+    }
+}

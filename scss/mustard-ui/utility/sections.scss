@@ -1,0 +1,27 @@
+// SECTIONS
+// ==============================
+
+$section-primary-bg-color: $color-amber-400;
+$section-secondary-bg-color: $color-gray-100;
+$section-tertiary-bg-color: $color-white;
+
+.section,
+section {
+    padding: 30px;
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section-primary {
+    background: $section-primary-bg-color;
+}
+
+.section-secondary {
+    background: $section-secondary-bg-color;
+}
+
+.section-tertiary {
+    background: $section-tertiary-bg-color;
+}

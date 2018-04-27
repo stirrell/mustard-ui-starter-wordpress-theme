@@ -1,0 +1,28 @@
+// BREADCRUMBS
+// ==============================
+
+$breadcrumb-spacing: 5px;
+$breadcrumb-separator: '/';
+
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+
+    li {
+        display: block;
+
+        &::after {
+            display: inline-block;
+            content: $breadcrumb-separator;
+            padding: 0 $breadcrumb-spacing;
+            color: $color-gray-500;
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
