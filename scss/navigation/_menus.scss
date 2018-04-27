@@ -3,13 +3,18 @@ nav {
 }
 
 .main-navigation {
-	background-color: white;
 	clear: both;
-	display: flex;
-	float: left;
 	width: 100%;
+	@include breakpoint-min($bp-medium) {
+		background-color: white;
+		display: flex;
+		float: left;
+	}
 
 	.menu {
+		@include breakpoint-max($bp-small) {
+			display: none;
+		}
 		box-shadow: none;
 		border-radius: 0;
 		li {
@@ -27,27 +32,31 @@ nav {
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
+			@include breakpoint-min($bp-medium) {
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: 100%;
 				left: -999em;
-				top: 0;
-			}
+				z-index: 99999;
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+				ul {
+					left: -999em;
+					top: 0;
+				}
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
 				}
 			}
 
 			a {
-				width: 200px;
+				@include breakpoint-min($bp-medium) {
+					width: 200px;
+				}
 			}
 
 			:hover > a,
@@ -66,8 +75,10 @@ nav {
 	}
 
 	li {
-		float: left;
-		position: relative;
+		@include breakpoint-min($bp-medium) {
+			float: left;
+			position: relative;
+		}
 
 		&:hover > a,
 		&.focus > a {
@@ -87,9 +98,20 @@ nav {
 }
 
 /* Small menu. */
+.menu-toggle {
+	margin-bottom: 0;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
+	width: 100%;
 	display: block;
+}
+
+.main-navigation.toggled {
+	.menu {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 37.5em) {

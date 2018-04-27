@@ -8,6 +8,12 @@
 --------------------------------------------------------------*/
 @import "menus";
 
+.nav-container {
+    @include breakpoint-max($bp-small) {
+        display: block;
+    }
+}
+
 nav {
     background-color: transparent;
 }
